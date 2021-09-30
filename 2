@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	int a, b;
+	cin >> a >> b;
+	if ( 1<= a && a <= 31 && b == 1 )
+		cout <<   ((31 - a) + 28 + 6*31 + 4*30);	
+	else if ( 1<= a && a <= 28  && b == 2 )
+		cout <<  ((28 - a) + 6*31 + 4*30);
+	else if ( 1<= a && a <= 31 && b == 3 )
+		cout <<  ((31 - a) + 5*31 + 4*30);
+	else if ( 1<= a && a <= 30 && b == 4)
+		cout <<  ((30 - a) + 5*31 + 3*30);
+	else if ( 1<= a && a <= 31 && b == 5 )
+		cout <<  ((31 - a) + 4*31 + 3*30);
+	else if ( 1<= a && a <= 30 && b == 6 )
+		cout <<  ((30 - a) + 4*31 + 2*30);
+	else if ( 1<= a && a <= 31 && b == 7 )
+		cout << ((31 - a) + 3*31 + 2*30);
+	else if ( 1<= a && a <= 31 && b == 8)
+		cout << ((31 - a) + 2*31 + 2*30);
+	else if ( 1<= a && a <= 30 && b == 9 )
+		cout << ((30 - a) + 2*31 +30);
+	else if ( 1<= a && a <= 31 && b == 10 )
+		cout << ((31 -a) + 30 + 31);
+	else if ( 1<= a && a <= 30 && b == 11 )
+		cout << ((30 - a) + 31);
+	else if ( 1<= a && a <= 31 && b == 12)
+		cout << ((31 - a));
+	else
+		cout << "false";
+	return 0;
+}
