@@ -1,0 +1,23 @@
+#include<iostream>
+
+using namespace std;
+int Fibonachi(int n){
+	if (n < 3){
+		return 1;
+	}
+	int a = 1, b = 1, c;
+		c = a + b;
+		a = b;
+		b = c;
+	}
+	
+	return c;
+}
+int main(){
+	
+	int n;
+	cin >> n;
+	cout << Fibonachi(n);
+	
+	return 0;
+}
