@@ -1,0 +1,23 @@
+#include<iostream>
+#include <cmath>
+
+using namespace std;
+
+int Bin(int a, int n = 0){
+	int c, f, i;
+	if (a == 0){
+		return 0;
+	}  
+	f = a % 10;
+	c = pow(2,n);
+	a = a / 10;
+	i = f * c + Bin(a, n + 1);
+	return i;
+}
+
+int main(){
+	int a, n = 0, i;
+	cin >> a;
+    i =	Bin(a, n);
+	cout << i;
+}
