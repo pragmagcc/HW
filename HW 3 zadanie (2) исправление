@@ -1,0 +1,18 @@
+#include<iostream>
+#include <cmath>
+
+using namespace std;
+
+int Bin(int a, int n){
+	if (a == 0){
+		return 0;
+	}  
+	return (a % 10) * pow(2, n) + Bin(a / 10, n + 1);
+}
+
+int main(){
+	int a;
+	cin >> a;
+	cout << Bin(a, 0);
+	return 0;
+}
