@@ -1,0 +1,42 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+void print_matrix(int**array, int n , int m){
+	for (int i = 0; i < n; i++){
+		for(int j = 0; j < m; j++){
+			cout << array[i][j] <<  " ";
+		}cout << endl;
+	}
+}
+void random_matrix(int**array, int n , int m){
+	srand(time(0));
+	for (int i = 0; i < n; i++){
+		for(int j = 0; j < m; j++){
+			array[i][j] = rand() % 5 + 1;
+		}
+	}
+}
+void odinakovie(int**array, int n , int m, int x){
+	int s = 0;
+	for (int i = 0; i < n; i++){
+		for(int j = 0; j < m; j++){
+			if (array[i][j] == x)
+				s++;
+		}
+	}
+	cout << s << endl;
+}
+int main(){
+	int n, m, x;
+	cin >> n >> m;
+	int** array = new int* [n];
+	for (int i = 0; i < n; i ++){
+		array[i] = new int [m];
+	}
+	random_matrix(array, n, m);
+	print_matrix(array, n , m);
+	
+	cin >> x;
+	odinakovie(array, n, m, x);
+	return 0;
+}
