@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	int m = 0;//количество пар 
+	char p[200];
+	scanf("%s", p);
+	int n = strlen(p);
+	for(int i = 0; i < n / 2; i++){
+		if(p[i] == p[n - i - 1]){
+			m++;
+		}
+	}
+	if (m == n / 2){
+		printf("%s", "polindrom");
+	}
+	else{
+		printf("%s", "not polindrom");
+	}
+	return 0;
+}
