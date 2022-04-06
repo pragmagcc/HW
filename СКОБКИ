@@ -1,0 +1,99 @@
+// скобки
+#include<iostream>
+#include <string>
+
+using namespace std;
+struct elem
+{
+	char value;
+	elem* next = nullptr;
+};
+void push(elem*& head, char val){
+	elem* newel = new elem;
+	newel -> value = val;
+	newel -> next = head;
+	head = newel;
+}
+char* peek(elem* head){
+	if(!head) return nullptr;
+	return &head -> value;
+}
+bool pop(elem*& head, char& val){
+	if(!head) return false;
+	elem* rem = head;
+	val = head -> value;
+	head = head -> next;
+	delete rem;
+	return true;
+}
+void clear(elem*& head){
+	while(head){
+		elem* rem = head;
+		head = rem -> next;
+		delete rem;
+	}
+}
+void fill_stack(elem*& head, string& a)
+{
+	for(int i = 0; i < a.size() ; i++){
+		if(a[i] == '(' || a[i] == '[' || a[i] == '{' || a[i] == '<')
+		{
+			push(head, a[i]);
+		}
+		if(a[i] == ')'){
+			char val = *peek(head);
+			if(val == '('){
+				pop(head, val);
+			}
+			else{
+				cout << i + 1;
+				return;	
+			}
+		}
+		if(a[i] == ']'){
+			char val = *peek(head);
+			if(val == '['){
+				pop(head, val);
+			}
+			else{
+				cout << i + 1;
+				return;	
+			}
+		}
+		if(a[i] == '}'){
+			char val = *peek(head);
+			if(val == '{'){
+				pop(head, val);
+			}
+			else{
+				cout << i + 1;
+				return;	
+			}
+		}
+		if(a[i] == '>'){
+			char val = *peek(head);
+			if(val == '<'){
+				pop(head, val);
+			}
+			else{
+				cout << i + 1;
+				return;	
+			}
+		}			
+	}
+	if(*peek(head) == '!'){
+		cout <<"Sequence of brackets is legal";
+	}
+	else{
+		cout <<"Sequence of brackets is not legal";
+	}
+}
+int main(){
+	string a;
+	cin >> a;
+	elem* head = new elem;
+	head -> value = '!';//создалась голова, имеет символ !
+	fill_stack(head, a);
+	clear(head);
+	return 0;
+}
