@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset = "Windows-1251">
+	<title>Belikova Tatyana</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<header> 
+<!--#Header#-->
+	</header>
+	<nav>
+<!--#MENU#-->
+	</nav>
+	<content>
+<!--#CONTENT#-->
+	</content>
+	
+	<footer>
+	<p><strong>&copy; Belikova Tatyana</strong></p>
+	</footer>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: каталог Output заканчивается не косой чертой.  Этот экземпляр сборки добавит косую черту, поскольку она необходима для правильного определения каталога Output.
+Source.obj : error LNK2005: main уже определен в main.obj
+Source.obj : error LNK2005: "void __cdecl show_menu(void)" (?show_menu@@YAXXZ) уже определен в main.obj
+Source.obj : error LNK2005: "void __cdecl show_content(void)" (?show_content@@YAXXZ) уже определен в main.obj
+..\..\..\..\..\..\OpenServer\domains\localhost\one.cgi : fatal error LNK1169: обнаружен многократно определенный символ - один или более
