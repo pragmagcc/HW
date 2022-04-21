@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\зс\source\repos\queue\queue\Source.cpp(64,23): warning C4477: "sscanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "size_t *"
+C:\Users\зс\source\repos\queue\queue\Source.cpp(64,23): message : рекомендуется использовать "%zd" в строке форматирования
+  queue.vcxproj -> C:\Users\зс\source\repos\queue\x64\Debug\queue.exe
